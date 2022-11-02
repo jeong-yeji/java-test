@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
@@ -13,7 +12,7 @@ class StudyTest {
 
     @Test
     @DisplayName("스터디 만들기 fast")
-    @Tag("fast")
+    @FastTest
     void create_new_study() {
 
         Study study = new Study(10);
@@ -22,7 +21,7 @@ class StudyTest {
 
     @Test
     @DisplayName("스터디 만들기 slow")
-    @Tag("slow")
+    @SlowTest
     void create_new_study_again() {
         System.out.println("Create Again");
     }
